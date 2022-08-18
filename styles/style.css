@@ -5,48 +5,79 @@
 .attribution {
     font-size: 11px;
     text-align: center;
+    background-color: hsl(30, 38%, 92%);
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-.container{
-    margin: 0;
-    background-color: hsl(30, 38%, 92%);
-    height: 100vh;
-    
-
+.container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+    padding: 15px 0;
 }
 
-.center{
+@media (min-width: 376px) {
+    .container {
+        margin: 0;
+        height: 94vh;
+        align-items: center;
+    }
+}
+
+.center {
     background-color: hsl(0, 0%, 100%);
-    max-width: 40%;
-    height: 50vh;
+    max-width: 90%;
     border-radius: 10px;
-
     display: flex;
+    flex-direction: column;
 }
 
-.img{
-    border-radius:10px 0 0 10px;
-    height: 100%;
-    min-width: 50%;
+@media (min-width: 401px) {
+    .center {
+        max-width: 40%;
+        height: 50vh;
+        flex-direction: row;
+    }
 }
 
-.info{
-    max-height: 100%;
-    max-width: 50%;
+.img {
+    background-attachment: unset;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../images/image-product-mobile.jpg');
+    border-radius: 10px 10px 0 0;
+    height: 300px;
+}
+
+@media (min-width: 401px) {
+    .img {
+        background-image: url('../images/image-product-desktop.jpg');
+        border-radius: 10px 0 0 10px;
+        height: 100%;
+        min-width: 50%;
+    }
+}
+
+.info {
+    max-width: 90%;
     padding: 25px;
     font-family: 'Montserrat', sans-serif;
+}
+
+@media (min-width: 401px) {
+    .info {
+        max-height: 100%;
+        max-width: 50%;
+        font-family: 'Montserrat', sans-serif;
+    }
 }
 
 .legend {
@@ -55,37 +86,37 @@ body{
     margin-top: 0;
 }
 
-.info h2{
+.info h2 {
     font-weight: bold;
     font-family: 'Fraunces', serif;
     font-size: 35px;
     margin: 0;
     line-height: 32px;
-} 
+}
 
-.desciption{
+.desciption {
     font-size: 15px;
     color: hsl(228, 12%, 48%);
     line-height: 20px;
 }
 
-.price{
+.price {
     color: hsl(158, 36%, 37%);
     font-family: 'Fraunces', serif;
     font-size: 28px;
     margin: 23px 0;
 }
 
-.price span{
+.price span {
     font-family: 'Montserrat', sans-serif;
     color: hsl(228, 12%, 48%);
     font-size: 14px;
     margin-left: 10px;
     vertical-align: middle;
-    text-decoration:line-through;
+    text-decoration: line-through;
 }
 
-button{
+button {
     background-color: hsl(158, 36%, 37%);
     border: none;
     border-radius: 5px;
@@ -97,6 +128,6 @@ button{
     cursor: pointer;
 }
 
-button:active{
+button:active {
     background-color: hsl(157, 36%, 23%);
 }
